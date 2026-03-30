@@ -3,4 +3,5 @@ export const strings = {
     passwordPlaceholder: 'Enter password',
     passswordSubmitButtonText: 'Continue',
     incorrectPasswordErrorText: 'Incorrect password. Please Try Again',
+    logoutButtonText: 'Logout'
 }

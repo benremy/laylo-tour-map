@@ -79,12 +79,6 @@ body {
   pointer-events: none;
 }
 
-.page-map {
-  flex: 1;
-  display: flex;
-  min-height: 0;
-}
-
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

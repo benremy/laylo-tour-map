@@ -1,5 +1,5 @@
 import { PasswordGate } from '@/modules/auth/components/password-gate/password-gate.component';
-import Prism from '@/components/Prism'
+import Prism from '@/components/prism/Prism'
 
 export default function Home() {
   return (
