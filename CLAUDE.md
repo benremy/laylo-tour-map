@@ -7,4 +7,4 @@
 - **Components are strictly presentational.** No hooks (`useState`, `useEffect`, `useRouter`, etc.) inside `.component.tsx` files. All stateful logic lives in `[module].hook.ts`. Violations must be fixed before considering any task complete.
 - **Never import SCSS modules in Server Components.** `app/layout.tsx` and any Server Component page in the `app/` directory must not import `.scss` files as modules — the JS object is `undefined` at runtime even though the CSS is injected. Two alternatives: (1) element-level or shared structural styles go in `globals.css` as element selectors or plain global classes (reference them as plain strings, e.g. `className="page-centered"`); (2) if a page file genuinely needs scoped styles, add `'use client'` so the module resolves correctly.
 - Place any data / mock.data  especially any needed data within ./data
-
+- For each new notable update to the codebase that warrants a release note update. update app/release-notes

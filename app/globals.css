@@ -79,6 +79,26 @@ body {
   pointer-events: none;
 }
 
+.page-nav {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.page-nav-link {
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+  text-decoration: none;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

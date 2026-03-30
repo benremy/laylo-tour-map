@@ -1,0 +1,108 @@
+import type { Show } from '@/modules/map/tour.types';
+
+export const mockShows: Show[] = [
+  {
+    id: 'show-1',
+    venue: {
+      id: 'venue-1',
+      name: 'Crypto.com Arena',
+      city: 'Los Angeles',
+      state: 'CA',
+      lat: 34.0430,
+      lng: -118.2673,
+    },
+    date: '2025-08-07',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-2',
+    venue: {
+      id: 'venue-2',
+      name: 'Climate Pledge Arena',
+      city: 'Seattle',
+      state: 'WA',
+      lat: 47.6221,
+      lng: -122.3540,
+    },
+    date: '2025-08-14',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-3',
+    venue: {
+      id: 'venue-3',
+      name: 'Ball Arena',
+      city: 'Denver',
+      state: 'CO',
+      lat: 39.7486,
+      lng: -105.0076,
+    },
+    date: '2025-08-21',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-4',
+    venue: {
+      id: 'venue-4',
+      name: 'Moody Center',
+      city: 'Austin',
+      state: 'TX',
+      lat: 30.2870,
+      lng: -97.7366,
+    },
+    date: '2025-09-04',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-5',
+    venue: {
+      id: 'venue-5',
+      name: 'United Center',
+      city: 'Chicago',
+      state: 'IL',
+      lat: 41.8807,
+      lng: -87.6742,
+    },
+    date: '2025-09-12',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-6',
+    venue: {
+      id: 'venue-6',
+      name: 'Bridgestone Arena',
+      city: 'Nashville',
+      state: 'TN',
+      lat: 36.1593,
+      lng: -86.7785,
+    },
+    date: '2025-09-19',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-7',
+    venue: {
+      id: 'venue-7',
+      name: 'Madison Square Garden',
+      city: 'New York',
+      state: 'NY',
+      lat: 40.7505,
+      lng: -73.9934,
+    },
+    date: '2025-10-03',
+    ticketUrl: '#',
+  },
+  {
+    id: 'show-8',
+    venue: {
+      id: 'venue-8',
+      name: 'State Farm Arena',
+      city: 'Atlanta',
+      state: 'GA',
+      lat: 33.7573,
+      lng: -84.3963,
+    },
+    date: '2025-10-10',
+    ticketUrl: '#',
+  },
+];

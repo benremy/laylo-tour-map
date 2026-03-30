@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
 import { fixLeafletIcons } from '../../map.service';
 import { useMapStore } from '../../map.store';
+import { VenueMarkers } from '../venue-markers/venue-markers.component';
 import styles from './map-canvas.module.scss';
 
 function MapEventHandler() {
@@ -44,6 +45,7 @@ export function MapCanvas() {
         attribution="&copy; OpenStreetMap contributors"
       />
       <MapEventHandler />
+      <VenueMarkers />
     </MapContainer>
   );
 }

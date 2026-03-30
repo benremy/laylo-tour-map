@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { TourMap } from '@/modules/map/components/tour-map/tour-map.component';
-import { LogoutBtn } from '@/modules/auth/components/logoutBtn/logout-btn.component';
+import MapHeader from '@/modules/map/components/map-header/map-header.component';
 import styles from "./map.module.scss"
 
 export default function MapPage() {
@@ -17,9 +17,7 @@ export default function MapPage() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.header}>
-        <LogoutBtn />
-      </div>
+      <MapHeader/>
       <TourMap />
     </main>
   );

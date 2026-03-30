@@ -1,0 +1,98 @@
+.page {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.back {
+  font-size: 0.875rem;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: -0.05rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.9375rem;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.entry {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.entryHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.version {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.125rem;
+  color: var(--color-text);
+}
+
+.entryTitle {
+  font-size: 1rem;
+  color: color-mix(in srgb, var(--color-text) 70%, transparent);
+}
+
+.date {
+  margin-left: auto;
+  font-size: 0.8125rem;
+  color: color-mix(in srgb, var(--color-text) 40%, transparent);
+}
+
+.changes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-left: 1px solid var(--color-border);
+  padding-left: 1.25rem;
+}
+
+.change {
+  font-size: 0.9375rem;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  line-height: 1.5;
+}
