@@ -36,8 +36,8 @@ The integration path is low-friction: swap the mock show data for a real `/api/s
 | F2 — Venue Markers | ✅ Done | SVG pins for each show, click sets selected show |
 | F3 — Show Detail | ✅ Done | Slide-up panel with venue, date, and ticket CTA |
 | F4 — Tour Sidebar | 🔲 Next | Scrollable show list, synced selection, map panning |
-| F5 — Date Filtering | 🔲 Planned | Toggle: All / Upcoming / Past |
-| F6 — Live Data | 🔲 Planned | SWR fetch from real API route, replace mock data |
+| F5 [ not imp ] — Date Filtering | 🔲 Planned | Toggle: All / Upcoming / Past |
+| F6 [ not imp ] — Live Data | 🔲 Planned | SWR fetch from real API route, replace mock data |
 
 ---
 
@@ -46,3 +46,9 @@ The integration path is low-friction: swap the mock show data for a real `/api/s
 - [ leaflet for mapping ](https://react-leaflet.js.org/docs/start-installation/)
 - [ zustand for state managment ](https://zustand.docs.pmnd.rs/learn/getting-started/introduction)
 - [ swr for data fetching ](https://swr.vercel.app/)
+
+# Future Considerations
+- Gemini 2.5 flash to prototype qualitative insights to future aid in planning out tours based on demands
+- Leveraging perplexity to scour the web for relative industry news
+- All LLM logic would take place serverside via edge functions to allow for multi-client connections
+- Edge-cached SWR responses to drastically reduce load times for the F6 live data integration.
