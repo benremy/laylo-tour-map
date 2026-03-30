@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { ShowDetail } from '../show-detail/show-detail.component';
 import styles from './tour-map.module.scss';
 
 const MapCanvas = dynamic(
@@ -10,6 +11,7 @@ export function TourMap() {
   return (
     <div className={styles.wrapper}>
       <MapCanvas />
+      <ShowDetail />
     </div>
   );
 }

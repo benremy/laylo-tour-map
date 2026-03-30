@@ -1,0 +1,72 @@
+.panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+
+  &.visible {
+    transform: translateY(0);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: color-mix(in srgb, var(--color-text) 50%, transparent);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.15s;
+
+  &:hover {
+    color: var(--color-text);
+  }
+}
+
+.venueName {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.375rem;
+  letter-spacing: -0.03rem;
+  color: var(--color-text);
+  margin: 0 0 0.375rem;
+}
+
+.location {
+  font-size: 0.9375rem;
+  color: color-mix(in srgb, var(--color-text) 55%, transparent);
+  margin: 0 0 1.25rem;
+}
+
+.date {
+  font-size: 0.9375rem;
+  color: color-mix(in srgb, var(--color-text) 75%, transparent);
+  margin: 0 0 1.5rem;
+}
+
+.ticketLink {
+  display: inline-block;
+  background: var(--color-text);
+  color: var(--color-background);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

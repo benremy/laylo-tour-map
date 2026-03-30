@@ -11,12 +11,12 @@ interface VenueMarkerProps {
 }
 
 export function VenueMarker({ show }: VenueMarkerProps) {
-  const { handleClick } = useVenueMarker(show);
+  const { handleClick, isActive } = useVenueMarker(show);
 
   return (
     <Marker
       position={[show.venue.lat, show.venue.lng]}
-      icon={createPinIcon()}
+      icon={createPinIcon(isActive)}
       eventHandlers={{ click: handleClick }}
     >
       <Popup>
