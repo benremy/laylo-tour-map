@@ -81,6 +81,11 @@ body {
   pointer-events: none;
 }
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 .page-nav {
   position: absolute;
   top: 1.5rem;

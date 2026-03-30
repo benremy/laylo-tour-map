@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <main className="page-centered">
       <div className="page-bg-layer"><Prism /></div>
-        <nav className="page-nav">
+      <nav className="page-nav">
         <Link href="https://github.com/benremy/laylo-tour-map" className="page-nav-link">Source Code</Link>
       </nav>
-      <nav className="page-nav">
+      {/* <nav className="page-nav">
         <Link href="/release-notes" className="page-nav-link">{strings.releaseNotesLinkText}</Link>
-      </nav>
+      </nav> */}
       <PasswordGate />
     </main>
   );
