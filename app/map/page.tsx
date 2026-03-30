@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { TourMap } from '@/modules/map/components/tour-map/tour-map.component';
 
 export default function MapPage() {
   const router = useRouter();
@@ -12,5 +13,9 @@ export default function MapPage() {
     }
   }, [router]);
 
-  return null;
+  return (
+    <main className="page-map">
+      <TourMap />
+    </main>
+  );
 }

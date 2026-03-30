@@ -3,11 +3,13 @@
 import { usePasswordGate } from './password-gate.hook';
 import styles from './password-gate.module.scss';
 import { strings } from '@/constants/strings.constants';
+import { GlassCard } from '../glass-card/glass-card.component';
 
 export function PasswordGate() {
   const { password, error, setPassword, handleSubmit } = usePasswordGate();
 
   return (
+    <GlassCard>
     <div className={styles.gate}>
       <h1 className={styles.logoMark}>{strings.logoMark}</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -27,5 +29,6 @@ export function PasswordGate() {
         </p>
       </form>
     </div>
+    </GlassCard>
   );
 }

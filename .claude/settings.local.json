@@ -4,7 +4,8 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(pnpm tsc:*)",
-      "Bash(ls /Users/reumy/Experiments/laylo-tour-map/.env*)"
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)"
     ]
   }
 }
