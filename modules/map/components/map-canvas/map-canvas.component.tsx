@@ -10,19 +10,27 @@ import styles from './map-canvas.module.scss';
 
 function MapEventHandler() {
   const setViewport = useMapStore((s) => s.setViewport);
+  const pendingPan = useMapStore((s) => s.pendingPan);
+  const clearPendingPan = useMapStore((s) => s.clearPendingPan);
 
-  useMapEvents({
+  const map = useMapEvents({
     moveend(e) {
-      const map = e.target;
-      const center = map.getCenter();
-      setViewport({ center: [center.lat, center.lng], zoom: map.getZoom() });
+      const m = e.target;
+      const center = m.getCenter();
+      setViewport({ center: [center.lat, center.lng], zoom: m.getZoom() });
     },
     zoomend(e) {
-      const map = e.target;
-      const center = map.getCenter();
-      setViewport({ center: [center.lat, center.lng], zoom: map.getZoom() });
+      const m = e.target;
+      const center = m.getCenter();
+      setViewport({ center: [center.lat, center.lng], zoom: m.getZoom() });
     },
   });
+
+  useEffect(() => {
+    if (!pendingPan) return;
+    map.flyTo(pendingPan, map.getZoom(), { duration: 0.6 });
+    clearPendingPan();
+  }, [pendingPan]);
 
   return null;
 }

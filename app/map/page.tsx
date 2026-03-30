@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { TourMap } from '@/modules/map/components/tour-map/tour-map.component';
+import { TourSidebar } from '@/modules/map/components/tour-sidebar/tour-sidebar.component';
 import MapHeader from '@/modules/map/components/map-header/map-header.component';
 import styles from "./map.module.scss"
 
@@ -17,8 +18,11 @@ export default function MapPage() {
 
   return (
     <main className={styles.main}>
-      <MapHeader/>
-      <TourMap />
+      <MapHeader />
+      <div className={styles.body}>
+        <TourSidebar />
+        <TourMap />
+      </div>
     </main>
   );
 }
