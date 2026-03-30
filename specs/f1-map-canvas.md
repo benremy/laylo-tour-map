@@ -21,9 +21,9 @@ Mount a fully functional Leaflet map that fills the map region. No markers yet �
 | `modules/map/map.store.ts` | Zustand store — viewport state |
 | `modules/map/map.service.ts` | Default config, Leaflet icon fix |
 | `modules/map/components/map-canvas/map-canvas.component.tsx` | `'use client'` — actual Leaflet map |
-| `modules/map/components/map-canvas/map-canvas.style.scss` | Height/width styles for the map container |
+| `modules/map/components/map-canvas/map-canvas.module.scss` | Height/width styles for the map container |
 | `modules/map/components/tour-map/tour-map.component.tsx` | `dynamic()` shell — SSR-safe entry point |
-| `modules/map/components/tour-map/tour-map.style.scss` | Wrapper layout styles |
+| `modules/map/components/tour-map/tour-map.module.scss` | Wrapper layout styles |
 
 ### Modified
 
@@ -126,7 +126,7 @@ Attribution: `© OpenStreetMap contributors`
 
 ## Styles
 
-### `map-canvas.style.scss`
+### `map-canvas.module.scss`
 
 ```scss
 .mapContainer {
@@ -137,7 +137,7 @@ Attribution: `© OpenStreetMap contributors`
 
 The parent layout (from F0's shell) must give this region a concrete height.
 
-### `tour-map.style.scss`
+### `tour-map.module.scss`
 
 ```scss
 .wrapper {

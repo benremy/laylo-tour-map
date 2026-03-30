@@ -12,7 +12,7 @@
 | Path | Role |
 |---|---|
 | `modules/auth/components/password-gate/password-gate.component.tsx` | `'use client'` — form + logic |
-| `modules/auth/components/password-gate/password-gate.style.scss` | Page styles |
+| `modules/auth/components/password-gate/password-gate.module.scss` | Page styles |
 
 ### Modified
 

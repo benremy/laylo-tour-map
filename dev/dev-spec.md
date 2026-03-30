@@ -33,7 +33,7 @@ All files follow the pattern: `[name].[role].ts(x)`
 | Role | Extension | Purpose |
 |---|---|---|
 | `component` | `.tsx` | React component |
-| `style` | `.scss` | SCSS module for the component |
+| `style` | `.module.scss` | SCSS module for the component |
 | `hook` | `.ts` | Custom React hook |
 | `service` | `.ts` | Business logic, data transforms |
 | `store` | `.ts` | Zustand store slice |
@@ -47,8 +47,9 @@ All files follow the pattern: `[name].[role].ts(x)`
 - **Directory name:** kebab-case (`venue-marker/`)
 - **File name:** kebab-case with role suffix (`venue-marker.component.tsx`)
 - **Component name in JSX:** PascalCase (`VenueMarker`)
-- Each component directory contains exactly its `.component.tsx` and `.style.scss`
-- Styles are SCSS modules — import as `styles` and use `styles.className`
+- Each component directory contains exactly its `.component.tsx` and `.module.scss`
+- Styles are SCSS modules — file must use the `.module.scss` extension (not `.scss`) so Next.js exports the class-name object. Import as `import styles from './[name].module.scss'` and use `styles.className`.
+- **Components are strictly presentational.** No `useState`, `useEffect`, `useRouter`, or any other hook calls inside a `.component.tsx` file. All logic lives in a `[module].hook.ts` file at the module root; the component receives values and handlers as props or via the hook's return value.
 
 ---
 
@@ -66,7 +67,7 @@ All files follow the pattern: `[name].[role].ts(x)`
 
 ### Tailwind CSS 4
 - No `tailwind.config.js`. All theme customization uses `@theme` blocks in `app/globals.css`.
-- Use Tailwind utilities for layout and spacing; use SCSS modules for component-specific styles.
+- **No Tailwind utility classes anywhere in TSX/JSX.** Tailwind is used solely as the token/reset layer via `@import "tailwindcss"` in `globals.css`. All layout, spacing, and component styles must be written in SCSS modules.
 
 ### Zustand 5
 - Use the `create` function directly without legacy middleware wrappers unless explicitly needed.
@@ -87,8 +88,8 @@ All files follow the pattern: `[name].[role].ts(x)`
 
 ## SCSS Modules
 
-- File: `[component-name].style.scss` inside the component directory
-- Import: `import styles from './[component-name].style.scss'`
+- File: `[component-name].module.scss` inside the component directory
+- Import: `import styles from './[component-name].module.scss'`
 - Class names: camelCase in SCSS (`.showCard`, `.activeState`)
 - Global overrides for third-party libraries (e.g. Leaflet popup styles) go in `app/globals.css`, not in modules
 
