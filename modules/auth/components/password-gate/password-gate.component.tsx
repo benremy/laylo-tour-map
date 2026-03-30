@@ -1,28 +1,29 @@
 'use client';
 
-import { usePasswordGate } from '@/modules/auth/auth.hook';
+import { usePasswordGate } from './password-gate.hook';
 import styles from './password-gate.module.scss';
+import { strings } from '@/constants/strings.constants';
 
 export function PasswordGate() {
   const { password, error, setPassword, handleSubmit } = usePasswordGate();
 
   return (
     <div className={styles.gate}>
-      <h1 className={styles.wordmark}>laylo</h1>
+      <h1 className={styles.logoMark}>{strings.logoMark}</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
         <input
           className={styles.input}
           type="password"
-          placeholder="Enter password"
+          placeholder={strings.passwordPlaceholder}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           autoFocus
         />
         <button className={styles.button} type="submit">
-          Continue
+          {strings.passswordSubmitButtonText}
         </button>
         <p className={`${styles.error} ${error ? styles.errorVisible : ''}`}>
-          Incorrect password
+          {strings.incorrectPasswordErrorText}
         </p>
       </form>
     </div>

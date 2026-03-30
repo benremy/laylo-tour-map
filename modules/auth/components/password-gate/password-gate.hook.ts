@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { FormSubmitEvent } from './password-gate.types';
 
 export interface UsePasswordGateReturn {
   password: string;
   error: boolean;
   setPassword: (value: string) => void;
-  handleSubmit: (e: { preventDefault(): void }) => void;
+  handleSubmit: (e: FormSubmitEvent) => void;
 }
 
 export function usePasswordGate(): UsePasswordGateReturn {
@@ -15,7 +16,7 @@ export function usePasswordGate(): UsePasswordGateReturn {
   const [error, setError] = useState(false);
   const router = useRouter();
 
-  function handleSubmit(e: { preventDefault(): void }) {
+  function handleSubmit(e: FormSubmitEvent) {
     e.preventDefault();
     if (password === process.env.NEXT_PUBLIC_GATE_PASSWORD) {
       sessionStorage.setItem('laylo-auth', '1');
