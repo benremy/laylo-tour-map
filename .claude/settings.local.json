@@ -7,7 +7,14 @@
       "Bash(pnpm add:*)",
       "Bash(pnpm build:*)",
       "Bash(git checkout:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(echo \"=== $f ===\")",
+      "Read(//Users/reumy/Experiments/laylo-tour-map/**)",
+      "Bash(done)",
+      "Bash(grep:*)"
     ]
   }
 }
