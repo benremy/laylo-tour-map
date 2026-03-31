@@ -1,7 +1,6 @@
 ## Strict Requirements
 
 - **Simplicity over everything.** For ALL implementations, always choose the most hyper-simplistic solution that gets the job done. Do not over-engineer. Avoid premature abstractions and complex design patterns when a simple, direct approach works. 
-- **Strict kebab-case file naming.** All file and directory names must exclusively use `kebab-case` (e.g., `my-cool-component.component.tsx`, `user-profile.hook.ts`). No camelCase, PascalCase, or snake_case allowed.
 - **No Tailwind utility classes in TSX/JSX.** All styles — including layout and spacing — must be written in SCSS modules (`.module.scss`). Tailwind is imported only as a token/reset layer in `app/globals.css`. Violations must be fixed before considering any task complete.
 - **SCSS module files must use the `.module.scss` extension.** Next.js only exports a class-name object for files ending in `.module.scss`. A plain `.scss` import injects CSS but `styles` will be `undefined` at runtime.
 - **Components are strictly presentational.** No hooks (`useState`, `useEffect`, `useRouter`, etc.) inside `.component.tsx` files. All stateful logic lives in `[module].hook.ts`. Violations must be fixed before considering any task complete.
@@ -21,3 +20,28 @@
 - **Localization** No strings should ever be hardcoded always dynamically referenced from @constants/strings
 - **Maximize component abstraction with recursive colocation.** Extract every logical UI section into its own named component until no further meaningful extraction is possible. A "meaningful extraction" is any element or group of elements with a distinct responsibility, a clear name, or potential for reuse. Stop extracting only when a component would be a single, non-decomposable HTML element with no variants or logic. Each extracted component lives in its own directory with a `.component.tsx` and a `.module.scss`. **Colocation rule:** components used exclusively by a parent must live inside that parent's own `components/` subfolder — not as siblings at the parent's level. This nesting is recursive: `modules/<feature>/components/<parent>/components/<child>/`. The container component (e.g. `*-page.component.tsx`) should contain only layout wrappers and data wiring — no raw JSX elements beyond those.
 - Ensure all designs all mobile responsive
+
+# Developer Guidelines
+
+### **Standardized Naming Conventions**
+To ensure our code remains readable, understandable, and maintainable, we apply specific casing conventions based on the context and the programming language being used. Please adhere to the following rules:
+
+* **Variables, Functions, and Methods (`camelCase` & `snake_case`)**
+    * **camelCase:** Use for variables, functions, and methods in **JavaScript, TypeScript, and Java**. The first word is lowercase, and subsequent words are capitalized. 
+        * *Example:* `numberOfDonuts`, `calculateTotal()`
+    * **snake_case:** Use for variables and methods in **Python**. All words are lowercase and separated by underscores.
+        * *Example:* `number_of_donuts`, `calculate_total()`
+
+* **Classes (`PascalCase`)**
+    * **PascalCase:** Use for naming classes across most programming languages. Every word, including the first, starts with a capital letter.
+        * *Example:* `DonutShop`, `UserProfile`
+
+* **Constants (`SCREAMING_SNAKE_CASE`)**
+    * **Upper Snake Case:** Use for declaring constants (data items whose values do not change) in most languages. All letters are capitalized and separated by underscores.
+        * *Example:* `MAX_DONUTS_ALLOWED = 12`, `API_BASE_URL`
+
+* **Files, Databases, and URLs (`snake_case` & `kebab-case`)**
+    * **snake_case:** Use for general file names and database table/column names to keep them highly readable.
+        * *Example:* `user_data.csv`, `first_name`
+    * **kebab-case:** Use strictly for URLs (and URL routing). All words are lowercase and separated by dashes.
+        * *Example:* `mywebsite.com/about-us`, `user-profile`
