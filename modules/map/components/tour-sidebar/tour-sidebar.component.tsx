@@ -1,6 +1,6 @@
 'use client';
 
-import { ShowCard } from '../show-card/show-card.component';
+import { ShowCard } from './components/show-card/show-card.component';
 import { useTourSidebar } from './tour-sidebar.hook';
 import styles from './tour-sidebar.module.scss';
 
