@@ -1,0 +1,12 @@
+.back {
+  align-self: flex-start;
+  color: var(--color-text);
+  opacity: 0.5;
+  font-size: 0.875rem;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+
+  &:hover {
+    opacity: 1;
+  }
+}

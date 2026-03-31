@@ -1,0 +1,31 @@
+.free {
+  font-size: 0.875rem;
+  opacity: 0.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+}
+
+.claimBtn {
+  margin-top: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--color-text);
+  color: var(--color-background);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.confirmed {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+  margin-top: 0.5rem;
+}

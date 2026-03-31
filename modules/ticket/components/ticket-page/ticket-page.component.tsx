@@ -1,9 +1,10 @@
 'use client';
 
-import Link from 'next/link';
-import { formatShowDate } from '@/modules/map/map.service';
-import { strings } from '@/constants/strings.constants';
 import { useTicketPage } from './ticket-page.hook';
+import { BackButton } from '../back-button/back-button.component';
+import { TicketNotFound } from '../ticket-not-found/ticket-not-found.component';
+import { TicketDetails } from '../ticket-details/ticket-details.component';
+import { TicketAction } from '../ticket-action/ticket-action.component';
 import styles from './ticket-page.module.scss';
 
 interface Props {
@@ -16,34 +17,14 @@ export function TicketPage({ showId }: Props) {
   return (
     <div className={styles.page}>
       <div className={styles.card}>
-        <Link href="/map" className={styles.back}>
-          {strings.ticketBackLink}
-        </Link>
+        <BackButton />
 
         {!show ? (
-          <p className={styles.notFound}>{strings.ticketNotFound}</p>
+          <TicketNotFound />
         ) : (
           <>
-            <p className={styles.heading}>
-              {isClaimed ? strings.ticketConfirmedHeading : strings.ticketClaimHeading}
-            </p>
-
-            <p className={styles.venue}>{show.venue.name}</p>
-            <p className={styles.meta}>
-              {show.venue.city}, {show.venue.state}
-            </p>
-            <p className={styles.meta}>{formatShowDate(show.date)}</p>
-
-            {isClaimed ? (
-              <p className={styles.confirmed}>{strings.ticketConfirmedLabel}</p>
-            ) : (
-              <>
-                <p className={styles.free}>{strings.ticketFreeLabel}</p>
-                <button className={styles.claimBtn} onClick={handleClaim}>
-                  {strings.ticketClaimCta}
-                </button>
-              </>
-            )}
+            <TicketDetails show={show} isClaimed={isClaimed} />
+            <TicketAction isClaimed={isClaimed} onClaim={handleClaim} />
           </>
         )}
       </div>
