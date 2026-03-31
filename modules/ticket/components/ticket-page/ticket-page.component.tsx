@@ -1,10 +1,10 @@
 'use client';
 
 import { useTicketPage } from './ticket-page.hook';
-import { BackButton } from '../back-button/back-button.component';
-import { TicketNotFound } from '../ticket-not-found/ticket-not-found.component';
-import { TicketDetails } from '../ticket-details/ticket-details.component';
-import { TicketAction } from '../ticket-action/ticket-action.component';
+import { BackButton } from './components/back-button/back-button.component';
+import { TicketNotFound } from './components/ticket-not-found/ticket-not-found.component';
+import { TicketDetails } from './components/ticket-details/ticket-details.component';
+import { TicketAction } from './components/ticket-action/ticket-action.component';
 import styles from './ticket-page.module.scss';
 
 interface Props {
