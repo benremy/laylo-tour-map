@@ -36,7 +36,8 @@ function MapEventHandler() {
 }
 
 export function MapCanvas() {
-  const viewport = useMapStore((s) => s.viewport);
+  // const viewport = useMapStore((s) => s.viewport); <-- THIS IS THE BASTARD. See? this is why you have to babysit claude
+  const viewport = useMapStore.getState().viewport;
 
   useEffect(() => {
     fixLeafletIcons();
