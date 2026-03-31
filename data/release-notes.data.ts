@@ -7,6 +7,16 @@ export interface ReleaseNote {
 
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: '0.4.0',
+    date: '2026-03-31',
+    title: 'Ticket Page',
+    changes: [
+      'Dedicated /ticket/[show-id] page for claiming free tickets',
+      'Claimed tickets persisted to localStorage — confirmed state survives page refresh',
+      'Show detail CTA now navigates in-app instead of opening an external link',
+    ],
+  },
+  {
     version: '0.3.0',
     date: '2026-03-30',
     title: 'Interactive Map',

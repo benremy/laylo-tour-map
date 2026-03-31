@@ -6,4 +6,12 @@ export const strings = {
     logoutButtonText: 'Logout',
     releaseNotesLinkText: 'Release Notes',
     releaseNotesSubtitle: "What's changed in Laylo Tour Map.",
+    ticketBackLink: '← Back to map',
+    ticketClaimHeading: 'Claim your ticket',
+    ticketConfirmedHeading: "You're in!",
+    ticketFreeLabel: 'Free',
+    ticketClaimCta: 'Claim Free Ticket',
+    ticketConfirmedLabel: 'Ticket confirmed',
+    ticketNotFound: 'Show not found.',
+    ticketGetTickets: 'Get Tickets →',
 }

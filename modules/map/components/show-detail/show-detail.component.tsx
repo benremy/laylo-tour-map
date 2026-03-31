@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { formatShowDate } from '@/modules/map/map.service';
+import { strings } from '@/constants/strings.constants';
 import { useShowDetail } from './show-detail.hook';
 import styles from './show-detail.module.scss';
 
@@ -19,14 +21,9 @@ export function ShowDetail() {
             {selectedShow.venue.city}, {selectedShow.venue.state}
           </p>
           <p className={styles.date}>{formatShowDate(selectedShow.date)}</p>
-          <a
-            href={selectedShow.ticketUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ticketLink}
-          >
-            Get Tickets →
-          </a>
+          <Link href={`/ticket/${selectedShow.id}`} className={styles.ticketLink}>
+            {strings.ticketGetTickets}
+          </Link>
         </>
       )}
     </div>

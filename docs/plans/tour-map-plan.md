@@ -61,7 +61,20 @@ _Scrollable list of all shows, synced with the map._
 
 ---
 
-### F5 — Date Filtering
+### F5 — Ticket Page
+_Dedicated free-ticket claim page with localStorage persistence._
+
+- Route: `/ticket/[show-id]`
+- `app/ticket/[show-id]/page.tsx` — Server Component shell, passes `showId` to client component
+- `modules/ticket/components/ticket-page/` — component + hook + SCSS module
+- Hook reads `localStorage['laylo-tickets']` on mount; `handleClaim` writes an entry on click
+- Two render states: **claim view** (unclaimed) and **confirmed view** (already claimed)
+- Show detail CTA updated: `<Link href={/ticket/${show.id}}>` instead of external `ticketUrl`
+- Spec: `docs/specs/f5-ticket-page.md`
+
+---
+
+### F6 — Date Filtering
 _Filter the visible shows._
 
 - `date-filter.component.tsx` — toggle: All / Upcoming / Past
@@ -70,7 +83,7 @@ _Filter the visible shows._
 
 ---
 
-### F6 — Data Fetching (SWR)
+### F7 — Data Fetching (SWR)
 _Replace mock data with a real API._
 
 - `shows.query.ts` — SWR fetcher + cache key
