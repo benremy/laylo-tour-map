@@ -14,7 +14,8 @@
       "Bash(echo \"=== $f ===\")",
       "Read(//Users/reumy/Experiments/laylo-tour-map/**)",
       "Bash(done)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(pnpm audit:*)"
     ]
   }
 }
