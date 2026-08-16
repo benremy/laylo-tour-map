@@ -7,6 +7,20 @@ export interface ReleaseNote {
 
 export const releaseNotes: ReleaseNote[] = [
   {
+    version: '0.5.0',
+    date: '2026-08-16',
+    title: 'Pivot: Local Venue Directory',
+    changes: [
+      'Repurposed from a fan-demand tour map into a curated local-venue directory for artists booking their own shows',
+      'Removed the password gate, auth session, and ticket-claim flow entirely — the directory is open, no login required',
+      'Replaced the Show/Venue model with a single curated Venue record: booking contact, pay structure, capacity, genre fit, equipment, recurring open-mic/live-music offerings, and curator call notes',
+      'Map, sidebar, and detail panel now center on a single configurable city (constants/city.constants.ts) instead of a multi-city tour',
+      'Venue detail panel surfaces a call/email "Contact venue" CTA in place of the old ticket-purchase link',
+      'data/venues.data.ts replaces data/mock-shows.data.ts — hand-edited by a curator after verifying each venue by phone, no live API',
+      'Planned next: filtering the venue list by offering type or pay structure once real curated data volume justifies it',
+    ],
+  },
+  {
     version: '0.4.0',
     date: '2026-03-31',
     title: 'Ticket Page',
